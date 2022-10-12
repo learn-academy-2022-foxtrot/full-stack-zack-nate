@@ -13,6 +13,9 @@ class BlogController < ApplicationController
 
   def create
     @blog = Blog.create(blog_params)
+    if @blog.valid?
+      redirect_to blogs_path
+      end
   end
 
   private
