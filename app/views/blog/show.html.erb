@@ -2,4 +2,9 @@
 <br />
 <%= @blogs.content %>
 <br />
+
+<p>
+<%= link_to 'Delete post', blog_path(@blog), data:{turbo_method: :delete} %>
+</p>
+
 <%= link_to 'Home', blogs_path %>
